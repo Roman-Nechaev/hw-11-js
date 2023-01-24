@@ -2,7 +2,7 @@
   "name": "hw-11-js",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Roman-Nechaev.github.io/hw-11-js",
+  "homepage": "https://Roman-Nechaev.github.io/hw-11-js/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /hw-11-js/"
