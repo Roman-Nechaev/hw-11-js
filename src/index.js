@@ -22,6 +22,7 @@ paginationBtn.addEventListener('input', onPaginationBtn);
 let checkTest;
 let isFlagForQuantity = false;
 
+const newApiService = new NewApiService();
 function onPaginationBtn(e) {
   const { value } = e.target;
 
@@ -109,8 +110,6 @@ function clearFace() {
   galletyBoxRef.innerHTML = '';
 }
 
-const newApiService = new NewApiService();
-
 const loadMoreBtn = new LoadMoreBtn({
   selector: '[data-action="load-more"]',
   hidden: true,
@@ -130,6 +129,6 @@ function loadMoreInfiniti() {
 }
 
 function getPenPath() {
-  newApiService.incrementPage();
-  return `${processingRequest()}`;
+  processingRequest();
+  return `${newApiService.incrementPage()}`;
 }
