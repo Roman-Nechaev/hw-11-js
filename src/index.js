@@ -121,7 +121,7 @@ var lightbox = new SimpleLightbox('.gallery a', {
 
 function loadMoreInfiniti() {
   new InfiniteScroll('.gallery', {
-    path: newApiService.incrementPage(),
+    path: getPenPath,
     append: false,
     append: '.gallery',
 
@@ -129,7 +129,7 @@ function loadMoreInfiniti() {
   });
 }
 
-// function getPenPath() {
-//   newApiService.incrementPage();
-//   return `${processingRequest()}`;
-// }
+function getPenPath() {
+  newApiService.incrementPage();
+  return `${processingRequest()}`;
+}
